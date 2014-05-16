@@ -24,7 +24,7 @@
 				from(rgba(255, 255, 255, 0.3)),
 				to(rgba(255, 255, 255, 0)));
 				background-repeat: no-repeat;
-			}
+		}
  
 		#container {
 			width: 100%;
@@ -247,10 +247,10 @@
 	function toggleBackfaces() {
 		var backfacesVisible = document.getElementById('backfaces').checked;
 		var shape = document.getElementById('shape');
-	if (backfacesVisible)
-		addClassName(shape, 'backfaces');
-	else
-		removeClassName(shape, 'backfaces');
+		if (backfacesVisible)
+			addClassName(shape, 'backfaces');
+		else
+			removeClassName(shape, 'backfaces');
 	}
 
 	jAd.createRing = function() {
@@ -305,8 +305,8 @@
 <body> 
 	<div class="controls"> 
 	<h1>Animations, Transitions and 3D Transforms</h1> 
-	<p></p> 
-	<p></p> 
+	<p>Sample Webkit transformations using my name, Paul Ireifej</p> 
+	<p>Very smooth, pretty and useful for usability or just bells & whistles! ^_^</p> 
 	<p>Toggle the Backfaces Visible checkbox to turn backfaces on and off using <code>-webkit-backface-visibility</code>.</p> 
 	<div><button onclick="toggleShape()">Toggle Shape</button></div> 
 	<div><input type="checkbox" id="backfaces" onclick="toggleBackfaces()" checked><label for="backfaces">Backfaces visible</label></div> 
